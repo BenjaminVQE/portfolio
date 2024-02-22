@@ -140,7 +140,7 @@
     .backCard {
       transform: scale(-1, 1);
       position: absolute;
-      transition: opacity .7s;
+      transition: opacity .3s;
       opacity: 0;
       perspective: 1000px;
     }
