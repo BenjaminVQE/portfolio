@@ -11,7 +11,12 @@ function MenuBurger() {
   };
   return (
     <div className="menu">
-      <MdMenu size={50} color="#31304D" onClick={toggleMenu} />
+      <MdMenu
+        size={50}
+        color="#31304D"
+        onClick={toggleMenu}
+        className="menuBurger"
+      />
       <RightNavBar isOpen={menuOpen} />
     </div>
   );
