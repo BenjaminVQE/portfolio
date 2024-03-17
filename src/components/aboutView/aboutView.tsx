@@ -15,8 +15,7 @@ function AboutView() {
       <h2>&lt; Présentation &gt;</h2>
       <div className="aboutMe">
         Salut ! Je m'appelle <strong>Benjamin</strong>, j'ai {resultBirth} ans,
-        je suis à la recherche d'une <strong>alternance</strong> de{" "}
-        <strong>18 mois</strong> en tant que{" "}
+        je suis à la recherche d'une <strong>alternance</strong> en tant que{" "}
         <strong>Concepteur Développeur d'Application</strong>. <br />
         Je suis passionné par le web, mon objectif est d'améliorer mes
         connaissances en la matière dans une perspective d'évolution constante.
