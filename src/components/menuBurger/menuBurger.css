@@ -4,6 +4,11 @@ a {
     font-family: var(--lovelo);
 }
 
+.parent a {
+    color: inherit;
+    font-family: inherit; 
+}
+
 .menu {
     position: relative;
 }
