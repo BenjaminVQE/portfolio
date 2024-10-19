@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  workflow_run:
+    workflows: ["Build Image and Push Registry"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: SSH to VPS and Deploy
+        env:
+          VPS_USER: ${{secrets.VPS_USER}}
+          VPS_IP: ${{secrets.VPS_IP}}
+          VPS_SSH_KEY: ${{secrets.VPS_SSH_KEY}}
+          REGISTRY_NAME: ${{secrets.REGISTRY_NAME}}
+
+        run:
+          mkdir -p ~/.ssh
+          echo "${VPS_SSH_KEY}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh -o StrictHostKeyChecking=no "${VPS_USER}@${VPS_IP}" << 'EOF'
+            sudo docker pull "${REGISTRY_NAME}/portfolio"
+
+            sudo docker stop portfolio-container || true
+            sudo docker rm portfolio-container || true
+
+            sudo docker run -d --name portfolio-container -p 3000:80 "${REGISTRY_NAME}/portfolio"
+          EOF
