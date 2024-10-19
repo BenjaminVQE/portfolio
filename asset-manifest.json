@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e0c8d008.css",
+    "main.js": "./static/js/main.3ae584a4.js",
+    "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
+    "static/media/CVBenjaminVaique.pdf": "./static/media/CVBenjaminVaique.74e46420e7fc334b4769.pdf",
+    "static/media/Lovelo-Black.otf": "./static/media/Lovelo-Black.7f0d34355af493564fc7.otf",
+    "index.html": "./index.html",
+    "main.e0c8d008.css.map": "./static/css/main.e0c8d008.css.map",
+    "main.3ae584a4.js.map": "./static/js/main.3ae584a4.js.map",
+    "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0c8d008.css",
+    "static/js/main.3ae584a4.js"
+  ]
+}
