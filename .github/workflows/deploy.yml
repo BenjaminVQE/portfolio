@@ -23,7 +23,7 @@ jobs:
 
         run:
           mkdir -p ~/.ssh
-          echo "${VPS_SSH_KEY}" > ~/.ssh/id_rsa
+          echo "$VPS_SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
           ssh -o StrictHostKeyChecking=no "${VPS_USER}@${VPS_IP}" << 'EOF'
@@ -32,5 +32,5 @@ jobs:
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
 
-            sudo docker run -d --name portfolio-container -p 3000:80 "${REGISTRY_NAME}/portfolio"
+            sudo docker run -d --name portfolio-container -p 3000:80 ${REGISTRY_NAME}/portfolio
           EOF
