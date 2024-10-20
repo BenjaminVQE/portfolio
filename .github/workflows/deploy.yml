@@ -37,5 +37,5 @@ jobs:
             sudo docker pull $REGISTRY_NAME/portfolio
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
-            sudo docker container run $REGISTRY_NAME/portfolio -d --name portfolio-container -p 3000:80 
+            sudo docker run -p 3000:80 --name portfolio-container -d $REGISTRY_NAME/portfolio
           EOF
