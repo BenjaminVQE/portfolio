@@ -38,5 +38,5 @@ jobs:
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
             echo "--Run container--"
-            sudo docker run -p 3000:80 --name portfolio-container -d $REGISTRY_NAME/portfolio
+            sudo docker run -p 3000:80 --name portfolio-container -d "$REGISTRY_NAME/portfolio"
           EOF
