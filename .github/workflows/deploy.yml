@@ -35,10 +35,10 @@ jobs:
         run: |
           ssh $VPS_USER@$VPS_IP << 'EOF'
             echo "--Start Pulling image--"
-            sudo docker pull $REGISTRY_NAME/portfolio
+            sudo docker pull docker.benjamin-vaique.fr/portfolio
             echo "--End Pulling image--"
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
             echo "--Running container--"
-            sudo docker run -p 3000:80 --name portfolio-container -d "$REGISTRY_NAME/portfolio"
+            sudo docker run -p 3000:80 --name portfolio-container -d docker.benjamin-vaique.fr/portfolio
           EOF
