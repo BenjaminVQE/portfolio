@@ -12,7 +12,11 @@ function FirstView() {
       </div>
       <div className="socialNetwork">
         <div className="buttonSN">
-          <a href="https://github.com/BVCoca" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/BenjaminVQE"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub size={50} className="iconSN" />
           </a>
           <a
