@@ -28,7 +28,7 @@ jobs:
 
       - name: SSH into VPS and deploy  
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $VPS_USER@$VPS_IP << 'EOF'
+          ssh $VPS_USER@$VPS_IP << 'EOF'
             sudo docker pull $REGISTRY_NAME/portfolio
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
