@@ -7,5 +7,6 @@
     {"name": "NextJs","src":"https://skillicons.dev/icons?i=next","lang": "front"},
     {"name": "PHP","src":"https://skillicons.dev/icons?i=php","lang": "back"},
     {"name": "Symfony","src":"https://skillicons.dev/icons?i=symfony","lang": "back"},
-    {"name": "MySQL","src":"https://skillicons.dev/icons?i=mysql","lang": "back"}
+    {"name": "MySQL","src":"https://skillicons.dev/icons?i=mysql","lang": "back"},
+    {"name": "Laravel","src":"https://skillicons.dev/icons?i=laravel","lang": "back"}
 ]
