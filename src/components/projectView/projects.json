@@ -6,5 +6,3 @@
     {"name": "Booki", "link":"https://benjaminvqe.github.io/Booki/","github":"https://github.com/BenjaminVQE/Booki", "lang": ["HTML", "CSS"], "desc": "Ce projet a été réalisé dans le cadre de mon apprentissage en HTML et CSS, visant a faire une intégration d'une maquette." , "logo": "/assets/booki.png"}
     {"name": "Tissup", "link":"https://benjaminvqe.github.io/Booki/","github":"https://github.com/BenjaminVQE/Booki", "lang": ["PHP", "SYMFONY"], "desc": "Projet d'école" , "logo": "/assets/booki.png"}
 ]
-
-]
