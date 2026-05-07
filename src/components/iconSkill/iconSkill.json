@@ -11,6 +11,6 @@
     {"name": "PostgreSQL","src":"https://skillicons.dev/icons?i=postgres","lang": "back"},
     {"name": "Docker","src":"https://skillicons.dev/icons?i=docker","lang": "back"},
     {"name": "Laravel","src":"https://skillicons.dev/icons?i=laravel","lang": "back"},
-     {"name": "NodeJs","src":"https://skillicons.dev/icons?i=nodejs","lang": "back"},
+    {"name": "NodeJs","src":"https://skillicons.dev/icons?i=nodejs","lang": "back"},
     {"name": "ExpressJs","src":"https://skillicons.dev/icons?i=expressjs","lang": "back"}
 ]
