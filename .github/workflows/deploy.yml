@@ -5,35 +5,39 @@ on:
     workflows: ["Build Image and Push Registry"]
     types:
       - completed
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push'
 
     env:
-      VPS_USER: ${{secrets.VPS_USER}}
-      VPS_IP: ${{secrets.VPS_IP}}
-      VPS_SSH_KEY: ${{secrets.VPS_SSH_KEY}}
-      REGISTRY_NAME: ${{secrets.REGISTRY_NAME}}
+      VPS_USER: ${{ secrets.VPS_USER }}
+      VPS_IP: ${{ secrets.VPS_IP }}
+      REGISTRY_NAME: ${{ secrets.REGISTRY_NAME }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
       - name: Setup SSH for VPS
-        uses: webfactory/ssh-agent@v0.5.3
+        uses: webfactory/ssh-agent@v0.7.0
         with:
-          ssh-private-key: ${{secrets.VPS_SSH_KEY}}
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
 
       - name: Add VPS to known_hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan $VPS_IP >> ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
+          ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
 
-      - name: SSH into VPS and deploy  
+      - name: SSH into VPS and deploy
         run: |
-          ssh $VPS_USER@$VPS_IP << EOF
+          ssh "$VPS_USER@$VPS_IP" << EOF
+            set -e
             echo "--Start Pulling image--"
             docker pull $REGISTRY_NAME/portfolio
             echo "--End Pulling image--"
