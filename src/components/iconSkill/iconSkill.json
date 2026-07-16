@@ -12,5 +12,8 @@
     {"name": "Docker","src":"https://skillicons.dev/icons?i=docker","lang": "back"},
     {"name": "Laravel","src":"https://skillicons.dev/icons?i=laravel","lang": "back"},
     {"name": "NodeJs","src":"https://skillicons.dev/icons?i=nodejs","lang": "back"},
-    {"name": "ExpressJs","src":"https://skillicons.dev/icons?i=expressjs","lang": "back"}
+    {"name": "ExpressJs","src":"https://skillicons.dev/icons?i=expressjs","lang": "back"},
+    {"name": "Git","src":"https://skillicons.dev/icons?i=git","lang": "tools"},
+    {"name": "Postman","src":"https://skillicons.dev/icons?i=postman","lang": "tools"},
+    {"name": "Vite","src":"https://skillicons.dev/icons?i=vite","lang": "tools"}
 ]

@@ -11,8 +11,11 @@ function Schema() {
       <hr className="heightLineLeft lineStyle" />
       <p className="backTitle">Back-End</p>
       <hr className="heightLineRight lineStyle" />
+      <hr className="heightLineMiddle lineStyle" />
+      <p className="toolsTitle">Outils</p>
       <div className="circle-dot posDot2"></div>
       <div className="circle-dot posDot3"></div>
+      <div className="circle-dot posDot4"></div>
     </div>
   );
 }

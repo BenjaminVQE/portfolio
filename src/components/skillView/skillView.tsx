@@ -17,6 +17,13 @@ function SkillView() {
               <IconSkill img={i.src} name={i.name} key={index} />
             ))}
         </div>
+        <div className="tools">
+          {icon
+            .filter((i: any) => i.lang === "tools")
+            .map((i: any, index: number) => (
+              <IconSkill img={i.src} name={i.name} key={index} />
+            ))}
+        </div>
         <div className="back">
           {icon
             .filter((i: any) => i.lang === "back")

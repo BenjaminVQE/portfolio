@@ -2,12 +2,15 @@
     0% {
         border: 3px solid var(--white);
     }
+
     40% {
         border: 3px solid var(--grey);
     }
+
     70% {
         border: 3px solid var(--blue);
     }
+
     100% {
         border: 3px solid var(--white);
     }
@@ -31,7 +34,7 @@
     animation: colorChange infinite 5s;
 }
 
-.heightLine2{
+.heightLine2 {
     position: relative;
     transform: rotate(90deg);
     width: 100px;
@@ -61,6 +64,14 @@
     animation: colorChange infinite 5s;
 }
 
+.heightLineMiddle {
+    position: relative;
+    top: 90px;
+    transform: rotate(90deg);
+    width: 170px;
+    animation: colorChange infinite 5s;
+}
+
 .posDot1 {
     position: relative;
     left: 50%;
@@ -77,6 +88,13 @@
     position: relative;
     left: 100%;
     top: 128px;
+    transform: translateX(-50%);
+}
+
+.posDot4 {
+    position: relative;
+    left: 50%;
+    top: 98px;
     transform: translateX(-50%);
 }
 
@@ -106,7 +124,7 @@
 .frontTitle {
     position: absolute;
     width: 100px;
-    bottom: 10px;
+    bottom: 70px;
     font-family: var(--lovelo);
     color: var(--white);
 }
@@ -114,8 +132,19 @@
 .backTitle {
     position: absolute;
     width: 100px;
-    bottom: 10px;
+    bottom: 70px;
     right: -25px;
+    font-family: var(--lovelo);
+    color: var(--white);
+}
+
+.toolsTitle {
+    position: absolute;
+    width: 100px;
+    bottom: -135px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     font-family: var(--lovelo);
     color: var(--white);
 }
