@@ -21,7 +21,7 @@ function CardProject({ link, name, github, lang, desc, logo }: IconProps) {
           <div className="containerCard">
             <div className="containerImgProject">
               <img
-                src={process.env.PUBLIC_URL + logo}
+                src={logo}
                 alt={`Logo ${name}`}
                 className="cardImgProject"
               />

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"index.tsx: %{http_code}\\\\n\" http://localhost:3000/src/index.tsx)",
+      "Bash(curl -s -o /dev/null -w \"favicon: %{http_code}\\\\n\" http://localhost:3000/assets/favicon.png)",
+      "Bash(curl -s -o /dev/null -w \"manifest: %{http_code}\\\\n\" http://localhost:3000/manifest.json)",
+      "Bash(docker build *)",
+      "Bash(docker run *)",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:8888/)",
+      "Bash(curl -s -o /dev/null -w \"favicon: %{http_code}\\\\n\" http://localhost:8888/assets/favicon.png)",
+      "Bash(curl -s http://localhost:8888/)",
+      "Bash(docker rm *)",
+      "Bash(docker rmi *)"
+    ]
+  }
+}
