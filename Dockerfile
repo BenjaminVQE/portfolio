@@ -17,7 +17,10 @@ COPY . .
 RUN npm run build
 
 # Utiliser une image NGINX pour servir l'application en production
-FROM nginx:alpine
+FROM nginx:1.31.2-alpine3.23-slim
+
+# Appliquer les correctifs de sécurité des paquets système Alpine
+RUN apk update && apk upgrade --no-cache
 
 # Copier les fichiers de build vers le répertoire NGINX
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
